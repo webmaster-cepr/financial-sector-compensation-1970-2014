@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(data.table)\n\n# YEARLY COMPENSATION FOR FINANCIAL SECTOR\n\ndat_98_14 = fread('data/1998-2014.csv',skip = 4, nrows=99, select=c(2:19))\ndat_88_97 = fread('data/1988-1997.csv',skip = 4, nrows=59, select=c(2:12))\ndat_70_87 = fread('data/1970-1987.csv',skip = 4, nrows=59, select=c(2:20))\n\n\nclean_dat = function(df,row) {\n  temp = as.data.frame(t(df[row,]))\n  temp$industry = temp$V1[1]\n  temp$year = as.factor(rownames(temp))\n  colnames(temp)[1] = \"compensation\"\n  temp = temp[-1,]\n  rownames(temp) = c(1:nrow(temp))\n  temp\n}\n\ndat_70_87_commod = clean_dat(dat_70_87,55)\ndat_70_87_other = clean_dat(dat_70_87,59)\ndat_88_97_commod = clean_dat(dat_88_97,55)\ndat_88_97_other = clean_dat(dat_88_97,59)\ndat_98_14_commod = clean_dat(dat_98_14,59)\ndat_98_14_other = clean_dat(dat_98_14,61)\n\n\ndat_70_14 = rbind(dat_70_87_commod,\n                  dat_70_87_other,\n                  dat_88_97_commod,\n                  dat_88_97_other,\n                  dat_98_14_commod,\n                  dat_98_14_other)\n\nrm(list=setdiff(ls(),\"dat_70_14\"))\n\ndat_70_14$compensation = as.numeric(as.character(dat_70_14$compensation))\n\n# GDP\n\ngdp = fread(\"data/gdp-1970-2014.csv\",skip=3,nrows=1,select=c(3:47))\n",
+    "created" : 1467830304917.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4273308935",
+    "id" : "7CC0DDF5",
+    "lastKnownWriteTime" : 1467834906,
+    "last_content_update" : 1467834906386,
+    "path" : "~/Documents/Papers/ftt-potential-revenues-2016-07/raw/cleandata.R",
+    "project_path" : "raw/cleandata.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

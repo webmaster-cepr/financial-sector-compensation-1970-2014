@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1467912344287.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F1292DCA",
+    "lastKnownWriteTime" : 230194464,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "o7ah509ytc",
+        "caption" : "datf_70_87",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=datf_70_87&cache_key=o7ah509ytc",
+        "displayedObservations" : 64,
+        "environment" : "",
+        "object" : "datf_70_87",
+        "totalObservations" : 64,
+        "variables" : 19
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
