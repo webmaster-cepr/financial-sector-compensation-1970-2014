@@ -1,6 +1,6 @@
 # README
 
-## WHAT
+## WHAT IS THIS?
 
 These scripts use data from the Bureau of Economic Analysis to produce graphics showing the change in compensation for financial sector employees from 1970-2014.
 
@@ -21,4 +21,12 @@ These scripts use data from the Bureau of Economic Analysis to produce graphics 
   * exploratory.R
     * some exploratory graphs and transformations on variables.
   * othersectors.R
-    * takes data from cleandata.R and excludes financial sector. Results in dataframe with compensation from all other sectors as share of gdp, used in animate.R
+    * takes data from cleandata.R and excludes financial sector. Results in dataframe with compensation from all other sectors as share of gdp, used in animate.R.
+
+## AUTHOR
+
+Matt Sedlar, Web Developer and Digital Content Strategist, Center for Economic and Policy Research, 2016. Direct questions to sedlar@cepr.net.
+
+## LICENSE
+
+This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
