@@ -1,5 +1,5 @@
 source('raw/exploratory.R')
-#source('raw/othersectors.R')
+source('raw/othersectors.R')
 
 require(animation)
 
