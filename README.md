@@ -28,6 +28,7 @@ These scripts use data from the Bureau of Economic Analysis to produce a graphic
 ## REQUIREMENTS
 
 R version 3.2.4
+
 The following packages:
 
 For data cleaning
