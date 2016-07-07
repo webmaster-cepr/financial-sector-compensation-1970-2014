@@ -2,7 +2,9 @@
 
 ## WHAT IS THIS?
 
-These scripts use data from the Bureau of Economic Analysis to produce graphics showing the change in compensation for financial sector employees from 1970-2014.
+These scripts use data from the Bureau of Economic Analysis to produce a graphic showing the change in compensation for financial sector employees from 1970-2014.
+
+![animated gif](https://github.com/webmaster-cepr/financial-sector-compensation-1970-2014/blob/master/financial-sector-1970-2014.gif)
 
 ## WHAT'S INSIDE
 
