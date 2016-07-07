@@ -25,6 +25,22 @@ These scripts use data from the Bureau of Economic Analysis to produce a graphic
   * othersectors.R
     * takes data from cleandata.R and excludes financial sector. Results in dataframe with compensation from all other sectors as share of gdp, used in animate.R.
 
+## REQUIREMENTS
+
+R version 3.2.4
+The following packages:
+
+For data cleaning
+* dplyr
+* data.table
+
+For visualization
+* ggplot2
+* cowplot
+
+For animation
+* animation
+
 ## AUTHOR
 
 Matt Sedlar, Web Developer and Digital Content Strategist, Center for Economic and Policy Research, 2016. Direct questions to sedlar@cepr.net.
