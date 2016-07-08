@@ -34,15 +34,15 @@ trace.bar = function(column) {
   p = ggplot() +
     geom_bar(data=staggered.dat,
              aes_string(colnames(staggered.dat)[1],colnames(staggered.dat)[column],fill=colnames(staggered.dat)[column]),stat="identity",width=.65) +
-    geom_line(data=othersectors,aes(x=year,y=perc.gdp,group=""),color="red") +
-    annotate("text", x="1970", y=0.58,label="Median Other Sectors",size=4,hjust=0,family="Verdana") +
+    geom_line(data=agriculture,aes(x=year,y=perc.gdp,group=""),color="red",size=1) +
+    annotate("text", x="1970", y=0.6,label="Agriculture",size=4,hjust=0,family="Verdana") +
     labs(x="Year\n\nSource: Bureau of Economic Analysis\nhttp://cepr.net",y="Percent of GDP") +
     scale_y_continuous(breaks = seq(0,max(dat$perc.gdp),by=.5),
                        expand = c(0,0),
                        labels=paste(seq(0,max(dat$perc.gdp),by=.5),"%",sep="")) +
     scale_fill_continuous(guide=F) +
     coord_cartesian(ylim=c(0,max(dat$perc.gdp)+.1)) +
-    ggtitle("Financial Sector Employee Compensation as Share of GDP, 1970-2014") +
+    ggtitle("Securities and Commodities Trading Compensation as Share of GDP, 1970-2014") +
     theme(panel.background=element_blank(),
           axis.text.x=element_text(family="Verdana",size=10,angle=90,vjust=.5),
           axis.text.y=element_text(family="Verdana",size=10),
@@ -60,4 +60,4 @@ trace.animate <- function() {
   })
 }
 
-saveGIF(trace.animate(),interval=.45,movie.name = "financial-sector-1970-2014.gif", ani.height=450, ani.width=600)
+saveGIF(trace.animate(),interval=.45,movie.name = "sec-com-1970-2014.gif", ani.height=550, ani.width=800)
